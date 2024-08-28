@@ -33,162 +33,97 @@ local GRM_ClassColor = {
 	["Rogue"]			= "FFFFF569",
 	["Hunter"]			= "FFABD473",
 	["Paladin"]			= "FFF58CBA",
+	["Death Knight"]	= "FFFF0000",
 }
 
 -- 7,8 방어구 토큰 이름 7,8 Armor Token Name
 local GRM_TokenList = {};
--- 티어 4 토큰 Tier 4 token
-GRM_TokenList[1] = "of the Fallen Champion";
-GRM_TokenList[2] = "of the Fallen Defender";
-GRM_TokenList[3] = "of the Fallen Hero";
--- 티어 5 토큰 Tier 5 Token
-GRM_TokenList[4] = "of the Vanquished Champion";
-GRM_TokenList[5] = "of the Vanquished Defender";
-GRM_TokenList[6] = "of the Vanquished Hero";
--- 티어 6 Tier 6
-GRM_TokenList[7] = "of the Forgotten Protector";
-GRM_TokenList[8] = "of the Forgotten Vanquisher";
-GRM_TokenList[9] = "of the Forgotten Conqueror";
+-- 티어 7 토큰 Tier 7 token
+GRM_TokenList[1] = "the Lost Conqueror";
+GRM_TokenList[2] = "the Lost Protector";
+GRM_TokenList[3] = "the Lost Vanquisher";
+-- 티어 8 토큰 Tier 8 Token
+GRM_TokenList[4] = "of the Wayward Conqueror";
+GRM_TokenList[5] = "of the Wayward Protector";
+GRM_TokenList[6] = "of the Wayward Vanquisher";
+-- 티어 7-10 Tier 7-10
+GRM_TokenList[7] = "Heroes' Frostfire";
+GRM_TokenList[8] = "Heroes' Plagueheart";
+GRM_TokenList[9] = "Heroes' Dreamwalker";
+GRM_TokenList[10] = "Heroes' Bonescythe";
+GRM_TokenList[11] = "Heroes' Cryptstalker";
+GRM_TokenList[12] = "Heroes' Earthshatter";
+GRM_TokenList[13] = "Heroes' Scourgeborne";
+GRM_TokenList[14] = "Heroes' Redemption";
+GRM_TokenList[15] = "Heroes' Dreadnaught";
+GRM_TokenList[16] = "Heroes' Robe of Faith";
+GRM_TokenList[17] = "Heroes' Gloves of Faith";
+GRM_TokenList[18] = "Heroes' Leggings of Faith";
+GRM_TokenList[19] = "Heroes' Raiments of Faith";
+GRM_TokenList[20] = "Heroes' Handwraps of Faith";
+GRM_TokenList[21] = "Heroes' Pants of Faith";
+GRM_TokenList[22] = "Hateful Gladiator's";
+-- 티어 7-25 Tier 7-25
+GRM_TokenList[23] = "Deadly Gladiator's";
+GRM_TokenList[24] = "Valorous Frostfire";
+GRM_TokenList[25] = "Valorous Plagueheart";
+GRM_TokenList[26] = "Valorous Dreamwalker";
+GRM_TokenList[27] = "Valorous BOnescythe";
+GRM_TokenList[28] = "Valorous Cryptstalker";
+GRM_TokenList[29] = "Valorous Earthshtatter";
+GRM_TokenList[30] = "Valorous Scourgeborne";
+GRM_TokenList[31] = "Valorous Redemption";
+GRM_TokenList[32] = "Valorous Dreadnaught";
+GRM_TokenList[33] = "Valorous Robe of Faith";
+GRM_TokenList[34] = "Valorous Gloves of Faith";
+GRM_TokenList[35] = "Valorous Leggings of Faith";
+GRM_TokenList[36] = "Valorous Raiments of Faith";
+GRM_TokenList[37] = "Valorous Handwraps of Faith";
+GRM_TokenList[38] = "Valorous Pants of Faith";
+-- 티어 8-10 Tier 8-10
+GRM_TokenList[39] = "Trophy of the Crusade";
+GRM_TokenList[40] = "s Mark of Sanctification";
+--GRM_TokenList[41] = "Conqueror's Mark of Sanctification";
+--GRM_TokenList[42] = "Protector's Mark of Sanctification";
+--GRM_TokenList[43] = "Vanquisher's Mark of Sanctification";
+--GRM_TokenList[45] = "정복자의 비호";
+--GRM_TokenList[46] = "정복자의 암흑룬문자";
+-- 티어 8-10 Tier 8-10
+-- 티어 8-25 Tier 8-25
 
 
 -- 결정화 안되는 아이템 이름 Item name that can not be disenchanted
 local GRM_NoCrystalList = {};
-GRM_NoCrystalList[1] = "of the Fallen Champion";
-GRM_NoCrystalList[2] = "of the Fallen Defender";
-GRM_NoCrystalList[3] = "of the Fallen Hero";
-GRM_NoCrystalList[4] = "of the Vanquished Champion";
-GRM_NoCrystalList[5] = "of the Vanquished Defender";
-GRM_NoCrystalList[6] = "of the Vanquished Hero";
-GRM_NoCrystalList[7] = "of the Forgotten Protector";
-GRM_NoCrystalList[8] = "of the Forgotten Vanquisher";
-GRM_NoCrystalList[9] = "of the Forgotten Conqueror";
-GRM_NoCrystalList[10] = "Formula: Enchant Weapon - Mongoose";
-GRM_NoCrystalList[11] = "Fiery Warhorse's Reins";
-GRM_NoCrystalList[12] = "Schematic: Stabilized Eternium Scope";
-GRM_NoCrystalList[13] = "Formula: Enchant Weapon - Soulfrost";
-GRM_NoCrystalList[14] = "Formula: Enchant Weapon - Sunfire";
-GRM_NoCrystalList[15] = "Formula: Enchant Boots - Surefooted";
-GRM_NoCrystalList[16] = "Pattern: Soulcloth Vest";
-GRM_NoCrystalList[17] = "Pattern: Soulcloth Shoulders";
-GRM_NoCrystalList[18] = "Pit Lord's Satchel";
-GRM_NoCrystalList[19] = "Magtheridon's Head";
-GRM_NoCrystalList[20] = "Black Sack of Gems";
-GRM_NoCrystalList[21] = "Pattern: Belt of Blasting";
-GRM_NoCrystalList[22] = "Pattern: Belt of the Long Road";
-GRM_NoCrystalList[23] = "Pattern: Belt of Natural Power";
-GRM_NoCrystalList[24] = "Pattern: Belt of Deep Shadow";
-GRM_NoCrystalList[25] = "Pattern: Belt of the Black Eagle";
-GRM_NoCrystalList[26] = "Pattern: Monsoon Belt";
-GRM_NoCrystalList[27] = "Plans: Belt of the Guardian";
-GRM_NoCrystalList[28] = "Plans: Red Belt of Battle";
-GRM_NoCrystalList[29] = "Pattern: Boots of Blasting";
-GRM_NoCrystalList[30] = "Pattern: Boots of the Long Road";
-GRM_NoCrystalList[31] = "Pattern: Boots of Natural Grace";
-GRM_NoCrystalList[32] = "Pattern: Boots of Utter Darkness";
-GRM_NoCrystalList[33] = "Pattern: Boots of the Crimson Hawk";
-GRM_NoCrystalList[34] = "Pattern: Hurricane Boots";
-GRM_NoCrystalList[35] = "Plans: Boots of the Protector";
-GRM_NoCrystalList[36] = "Plans: Red Havoc Boots";
-GRM_NoCrystalList[37] = "Ashes of Al'ar";
-GRM_NoCrystalList[38] = "Verdant Sphere";
-GRM_NoCrystalList[39] = "Design: Flashing Crimson Spinel";
-GRM_NoCrystalList[40] = "Design: Stormy Empyrean Sapphire";
-GRM_NoCrystalList[41] = "Design: Mystic Lionseye";
-GRM_NoCrystalList[42] = "Design: Great Lionseye";
-GRM_NoCrystalList[43] = "Design: Sovereign Shadowsong Amethyst";
-GRM_NoCrystalList[44] = "Design: Shifting Shadowsong Amethyst";
-GRM_NoCrystalList[45] = "Design: Inscribed Pyrestone";
-GRM_NoCrystalList[46] = "Design: Veiled Pyrestone";
-GRM_NoCrystalList[47] = "Plans: Swiftsteel Bracers";
-GRM_NoCrystalList[48] = "Plans: Dawnsteel Shoulders";
-GRM_NoCrystalList[49] = "Pattern: Shoulderpads of Renewed Life";
-GRM_NoCrystalList[50] = "Pattern: Swiftstrike Bracers";
-GRM_NoCrystalList[51] = "Pattern: Bindings of Lightning Reflexes";
-GRM_NoCrystalList[52] = "Pattern: Living Earth Shoulders";
-GRM_NoCrystalList[53] = "Pattern: Swiftheal Wraps";
-GRM_NoCrystalList[54] = "Pattern: Mantle of Nimble Thought";
-GRM_NoCrystalList[55] = "Crimson Spinel";
-GRM_NoCrystalList[56] = "Lionseye";
-GRM_NoCrystalList[57] = "Pyrestone";
-GRM_NoCrystalList[58] = "Seaspray Emerald";
-GRM_NoCrystalList[59] = "Empyrean Sapphire";
-GRM_NoCrystalList[60] = "Shadowsong Amethyst";
-GRM_NoCrystalList[61] = "Plans: Dawnsteel Bracers";
-GRM_NoCrystalList[62] = "Pattern: Living Earth Bindings";
-GRM_NoCrystalList[63] = "Plans: Swiftsteel Shoulders";
-GRM_NoCrystalList[64] = "Pattern: Swiftstrike Shoulders";
-GRM_NoCrystalList[65] = "Pattern: Shoulders of Lightning Reflexes";
-GRM_NoCrystalList[66] = "Pattern: Swiftheal Mantle";
-GRM_NoCrystalList[67] = "Pattern: Bracers of Renewed Life";
-GRM_NoCrystalList[68] = "Pattern: Bracers of Nimble Thought";
-GRM_NoCrystalList[69] = "Warglaive of Azzinoth";
-GRM_NoCrystalList[70] = "Formula: Enchant Weapon - Executioner";
-GRM_NoCrystalList[71] = "Blood of Zul'jin";
-GRM_NoCrystalList[72] = "Amani War Bear";
-GRM_NoCrystalList[73] = "Thori'dal, the Stars' Fury";
-GRM_NoCrystalList[74] = "Sunmote";
-GRM_NoCrystalList[75] = "Study of Advanced Smelting";
-GRM_NoCrystalList[76] = "Schematic: Annihilator Holo-Gogs";
-GRM_NoCrystalList[77] = "Schematic: Justicebringer 3000 Specs";
-GRM_NoCrystalList[78] = "Schematic: Powerheal 9000 Lens";
-GRM_NoCrystalList[79] = "Schematic: Hyper-Magnified Moon Specs";
-GRM_NoCrystalList[80] = "Schematic: Wonderheal XT68 Shades";
-GRM_NoCrystalList[81] = "Schematic: Primal-Attuned Goggles";
-GRM_NoCrystalList[82] = "Schematic: Lightning Etched Specs";
-GRM_NoCrystalList[83] = "Schematic: Surestrike Goggles v3.0";
-GRM_NoCrystalList[84] = "Schematic: Mayhem Projection Goggles";
-GRM_NoCrystalList[85] = "Schematic: Hard Khorium Goggles";
-GRM_NoCrystalList[86] = "Schematic: Quad Deathblow X44 Goggles";
-GRM_NoCrystalList[87] = "Design: Loop of Forged Power";
-GRM_NoCrystalList[88] = "Design: Ring of Flowing Life";
-GRM_NoCrystalList[89] = "Design: Hard Khorium Band";
-GRM_NoCrystalList[90] = "Design: Pendant of Sunfire";
-GRM_NoCrystalList[91] = "Design: Amulet of Flowing Life";
-GRM_NoCrystalList[92] = "Design: Hard Khorium Choker";
-GRM_NoCrystalList[93] = "Pattern: Sunfire Handwraps";
-GRM_NoCrystalList[94] = "Pattern: Hands of Eternal Light";
-GRM_NoCrystalList[95] = "Pattern: Sunfire Robe";
-GRM_NoCrystalList[96] = "Pattern: Robe of Eternal Light";
-GRM_NoCrystalList[97] = "Plans: Sunblessed Gauntlets";
-GRM_NoCrystalList[98] = "Plans: Hard Khorium Battlefists";
-GRM_NoCrystalList[99] = "Plans: Sunblessed Breastplate";
-GRM_NoCrystalList[100] = "Plans: Hard Khorium Battleplate";
-GRM_NoCrystalList[101] = "Pattern: Leather Gauntlets of the Sun";
-GRM_NoCrystalList[102] = "Pattern: Fletcher's Gloves of the Phoenix";
-GRM_NoCrystalList[103] = "Pattern: Gloves of Immortal Dusk";
-GRM_NoCrystalList[104] = "Pattern: Sun-Drenched Scale Gloves";
-GRM_NoCrystalList[105] = "Pattern: Leather Chestguard of the Sun";
-GRM_NoCrystalList[106] = "Pattern: Embrace of the Phoenix";
-GRM_NoCrystalList[107] = "Pattern: Carapace of Sun and Shadow";
-GRM_NoCrystalList[108] = "Pattern: Sun-Drenched Scale Chestguard";
-GRM_NoCrystalList[109] = "Nether Vortex";
+GRM_NoCrystalList[1] = "the Lost Conqueror";
+GRM_NoCrystalList[2] = "the Lost Protector";
+GRM_NoCrystalList[3] = "the Lost Vanquisher";
+GRM_NoCrystalList[4] = "of the Wayward Conqueror";
+GRM_NoCrystalList[5] = "of the Wayward Protector";
+GRM_NoCrystalList[6] = "of the Wayward Vanquisher";
+GRM_NoCrystalList[7] = "Hateful Gladiator's";
+GRM_NoCrystalList[8] = "Deadly Gladiator's";
+GRM_NoCrystalList[9] = "Brutal Gladiator's";
+GRM_NoCrystalList[10] = "Heroic Key to the Focusing Iris"
+GRM_NoCrystalList[11] = "Dragon Hide Bag";
+GRM_NoCrystalList[12] = "Large Satchel of Spoils";
+GRM_NoCrystalList[13] = "Reins of the Blue Drake";
+GRM_NoCrystalList[14] = "Reins of the Black Drake";
+GRM_NoCrystalList[15] = "Reins of the Grand Black War Mammoth";
+GRM_NoCrystalList[16] = "Fragment of Val'anyr";
+GRM_NoCrystalList[17] = "Runed Orb";
+GRM_NoCrystalList[18] = "Primordial Saronite";
+GRM_NoCrystalList[19] = "Shadowfrost Shard";
+GRM_NoCrystalList[20] = "Festergut's Acidic Blood";
+GRM_NoCrystalList[21] = "Rotface's Acidic Blood";
+GRM_NoCrystalList[22] = "Crusader Orb";
 
 -- 링크 무시 아이템 이름 Ignore link item name
 local GRM_IgnoreLinkList = {};
-GRM_IgnoreLinkList[1] = "Badge of Justice";
-GRM_IgnoreLinkList[2] = "Medivh's Journal";
-GRM_IgnoreLinkList[3] = "Blazing Signet";
-GRM_IgnoreLinkList[4] = "Faint Arcane Essence";
-GRM_IgnoreLinkList[5] = "Legacy of the Mountain King";
-GRM_IgnoreLinkList[6] = "Torment of the Worgen";
-GRM_IgnoreLinkList[7] = "Redemption of the Fallen";
-GRM_IgnoreLinkList[8] = "Wrath of the Titans";
-GRM_IgnoreLinkList[9] = "Soul Essence";
-GRM_IgnoreLinkList[10] = "Earthen Signet";
-GRM_IgnoreLinkList[11] = "Amani Hex Stick";
-GRM_IgnoreLinkList[12] = "Mark of the Illidari";
-GRM_IgnoreLinkList[13] = "Vashj's Vial Remnant";
-GRM_IgnoreLinkList[14] = "Kael's Vial Remnant";
-GRM_IgnoreLinkList[15] = "Infinity Blade";
-GRM_IgnoreLinkList[16] = "Warp Slicer";
-GRM_IgnoreLinkList[17] = "Cosmic Infuser";
-GRM_IgnoreLinkList[18] = "Devastation";
-GRM_IgnoreLinkList[19] = "Staff of Disintegration";
-GRM_IgnoreLinkList[20] = "Phaseshift Bulwark";
-GRM_IgnoreLinkList[21] = "Netherstrand Longbow";
-GRM_IgnoreLinkList[22] = "Nether Spike";
-GRM_IgnoreLinkList[23] = "Heart of Darkness";
-GRM_IgnoreLinkList[24] = "Time-Phased Phylactery";
+GRM_IgnoreLinkList[1] = "Emblem of Heroism";
+GRM_IgnoreLinkList[2] = "Emblem of Valor";
+GRM_IgnoreLinkList[3] = "Emblem of Conquest";
+GRM_IgnoreLinkList[4] = "Stone Keeper's Shard";
+GRM_IgnoreLinkList[5] = "Emblem of Frost";
 
 -- 스케쥴 함수 Schedule function
 local GRM_HOOKED			= 0;
@@ -1456,12 +1391,12 @@ function GRM_PlayerSaySomething( msg, player )
 		removeItemLinkmsg = msg;
 	end
 	local gold = string.match( GRM_RemoveChatHead(removeItemLinkmsg), "(%d+)" );
-	local handsUp = string.match( removeItemLinkmsg, "hand" ) or string.match( removeItemLinkmsg, "raisehand" ) or string.match( removeItemLinkmsg, "roll");
+	local handsUp = string.match( removeItemLinkmsg, "손" ) or string.match( removeItemLinkmsg, "입" ) or string.match( removeItemLinkmsg, "저");
 
 	if ( GRM_Option["DiceParty"] == 1 ) then
 		if ( handsUp and (not GRM_DicePlayers[player]) ) then	
 			GRM_DicePlayers[player] = 0;
-			GRM_SystemChat( player .. " You raised your hand." );
+			GRM_SystemChat( player .. " 님이 손드셨습니다." );
 		end
 	elseif ( gold ) then
 		-- 일단 기존에 진행중이던 경매는 중지 Once the auction is in progress
@@ -1557,10 +1492,10 @@ function GRM_PlayerLootItem( text )
 	for color, item, name in string.gmatch(text, "|c(%x+)|Hitem:(%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+)|h%[(.-)%]|h|r") do 
 		local bCheck = (UnitInRaid("player") and ( GRM_ItemColors[color] >= GetLootThreshold() )) or (UnitInParty("party1") and ( GRM_ItemColors[color] >= 3 ));
 		if ( color and item and name and name ~= "" and bCheck ) then
-			local _,_,player = string.find( text, "(.+)unspecified name" );
+			local _,_,player = string.find( text, "(.+)님이" );
 			if ( not player ) then
-				GRM_Debug( true, "(.+)Player not found");
-				_,_,player = string.find( text, "(.+)%|1person;end;" );
+				GRM_Debug( true, "(.+)님이 에서 플레이어 못찾음");
+				_,_,player = string.find( text, "(.+)%|1이;가;" );
 				if ( not player ) then
 					player = UnitName("player");
 				end
@@ -1782,11 +1717,11 @@ function GRM_AuctionChannelToggle()
 --------------------------------------------------------------
 	if ( GRM_Option["AuctionChannel"] == "RAID_WARNING" ) then
 		GRM_Option["AuctionChannel"] = "RAID";
-		GRM_AuctionChannel_Button:SetText("RA Channel");
+		GRM_AuctionChannel_Button:SetText("Канал рейда");
 		GRM_SystemChat("Announce in RA Channel.");
 	else
 		GRM_Option["AuctionChannel"] = "RAID_WARNING";
-		GRM_AuctionChannel_Button:SetText("RW Channel");
+		GRM_AuctionChannel_Button:SetText("Канал /RW");
 		GRM_SystemChat("Announce in RW Channel.");
 	end
 end
@@ -1796,11 +1731,11 @@ function GRM_CustomBriefChannelToggle()
 --------------------------------------------------------------
 	if ( GRM_Option["CustomBriefChannel"] == "RAID_WARNING" ) then
 		GRM_Option["CustomBriefChannel"] = "RAID";
-		GRM_CustomBriefChannel_Button:SetText("RA Channel");
+		GRM_CustomBriefChannel_Button:SetText("Канал рейда");
 		GRM_SystemChat("Announce in RA Channel.");
 	else
 		GRM_Option["CustomBriefChannel"] = "RAID_WARNING";
-		GRM_CustomBriefChannel_Button:SetText("RW Channel");
+		GRM_CustomBriefChannel_Button:SetText("Канал /RW");
 		GRM_SystemChat("Announce in RW Channel.");
 	end
 end
@@ -2102,11 +2037,11 @@ end
 function GRM_BriefPriorGoldOnClick()
 --------------------------------------------------------------
 	if ( not GRM_RaceOption["GoldPerDeal"] ) then
-		GRM_SystemChat("Gold history is empty");
+		GRM_SystemChat("뒷거래 1회 골드 내역이 비어있습니다");
 	end
 
   if ( not GRM_PriorList) then
-    GRM_SystemChat("There is no history on previous deals");
+    GRM_SystemChat("선입 내역이 없습니다.");
     return;
   end
   
@@ -2165,16 +2100,16 @@ function GRM_BriefPriorGoldOnClick()
 	end
 
 	msg = msg .. msgtail .. "Total Gold Earned(".. MemberNum .. "players): " .. totalGold .. "gold\n";
-	msg = msg .. "Per player " .. string.format(GoldFormat, EachGold) .. "gold\n";
+	msg = msg .. "1 명당 " .. string.format(GoldFormat, EachGold) .. "골\n";
 
 	-- 무득골팟 아니면 파티당 골드 계산 Unincorporated gold pod or gold per party
 	if ( MemberNum > 5 ) then
 		if ( math.fmod(MemberNum,5) ~= 0 ) then
-			msg = msg .. "For every 2 people " .. string.format(GoldFormat, EachGold*2) .. "gold\n";
-			msg = msg .. "For every 3 people " .. string.format(GoldFormat, EachGold*3) .. "gold\n";
-			msg = msg .. "For every 4 people " .. string.format(GoldFormat, EachGold*4) .. "gold\n";
+			msg = msg .. "2 명당 " .. string.format(GoldFormat, EachGold*2) .. "골\n";
+			msg = msg .. "3 명당 " .. string.format(GoldFormat, EachGold*3) .. "골\n";
+			msg = msg .. "4 명당 " .. string.format(GoldFormat, EachGold*4) .. "골\n";
 		end
-		msg = msg .. "Per group " .. string.format(GoldFormat, EachGold*5) .. "gold\n";
+		msg = msg .. "파티당 " .. string.format(GoldFormat, EachGold*5) .. "골\n";
 	end
 	msg = msgHdr .. msg .. msgtail;
 	
@@ -2197,19 +2132,20 @@ function GRM_OnLootLog()
 		return;
 	end
 	
-	msg = msg.."# Loot Log (Boss) #\n";
+	msg = msg.."# LOOT (Boss) #\n";
 	local named;
 	for named in pairs( GRM_RaidLog ) do
 		if ( not string.find(GRM_GetTotalGold(named), "AC") ) then
-		  msg = msg.."\n>> "..named.."\n";
+		  msg = msg.."\n>> "..named.." <<\n";
 			local itemName, itemInfo;
 			for itemName, itemInfo in pairs(GRM_RaidLog[named]) do
 				if ( itemInfo.looter and itemInfo.gold >= 10 ) then
 				  msg = msg.."    "..itemName.."\n";
-				  msg = msg.."      >>["..itemInfo.loottime.."] <"..itemInfo.looter.."> "..itemInfo.gold.."g\n";
+				  msg = msg.."      ["..itemInfo.loottime.."] <"..itemInfo.looter.."> "..itemInfo.gold.."g\n";
 				elseif ( GRM_AuctionTable and GRM_AuctionTable[itemName] and itemInfo.gold > 10 ) then
+				  msg = msg..""..itemInfo.gold.." @"..GRM_AuctionTable[itemName].."\n";
 				  msg = msg.."    "..itemName.."\n";
-				  msg = msg.."      >><"..GRM_AuctionTable[itemName].."> "..itemInfo.gold.."g\n";
+
 				end
 			end
 		end
@@ -2229,7 +2165,7 @@ function GRM_OnLootLogPerUser()
 		return;
 	end
 
-	msg = msg.."# Loot Log (Player) #";
+	msg = msg.."# Лут (Игроки) #";
 
 	local lootPerUser = {};
 	local named;
@@ -2282,15 +2218,16 @@ function GRM_ItemRuleBriefing()
 	local zonetext = GetZoneText();
 	local buntext = "";
 	if ( GRM_Option["AuctionAllbun"] == 1 ) then
-	  buntext = "{Circle} Gold pot split to all raid members.\n";
+	  buntext = "{Circle} Мейнспек>Оффспек.\n";
 	else
-	  buntext = "{Star} Gold pot split to non-looters.\n";
+	  buntext = "{Star} Можно бидать на любой спек.\n";
 	end
 	local msgtail = GRM_locale.BriefMsgLine;
 	local msgHdr = GRM_locale.BriefMsgPrefix .. zonetext .. GRM_locale.BriefMsgPostfix .. msgtail;
 --	local msg = "기본 "..GRM_RaceOption["NormalStart"].."/토큰 "..GRM_RaceOption["TokenStart"].."/레이스 "..GRM_RaceOption["NormalRace"].."\n".."카운트 "..GRM_RaceOption["Count"].."\n"..msgtail;
-	local msg = "Epic "..GRM_RaceOption["NormalStart"].."// Token "..GRM_RaceOption["TokenStart"].."// Raise "..GRM_RaceOption["NormalRace"].."\n"..buntext..msgtail;
-  local msgwarning = GRM_locale.RuleBrief0..GRM_locale.RuleBrief1..GRM_locale.RuleBrief2..msgtail..GRM_locale.RuleBrieftail1..GRM_TITLENAME..GRM_locale.RuleBrieftail2;
+	local msg = "БоЕ/Рецы "..GRM_RaceOption["NormalStart"].."// Токен "..GRM_RaceOption["TokenStart"].."// Шаг "..GRM_RaceOption["NormalRace"].."\n"..buntext..msgtail;
+--  local msgwarning = GRM_locale.RuleBrief0..GRM_locale.RuleBrief1..GRM_locale.RuleBrief2..msgtail..GRM_locale.RuleBrieftail1..GRM_TITLENAME..GRM_locale.RuleBrieftail2; #Сократил "правила".
+  local msgwarning = GRM_locale.RuleBrief0..GRM_locale.RuleBrief1..GRM_locale.RuleBrief2..msgtail;
   GRM_BriefMsgToChannel(msgHdr .. msg .. msgwarning);
 end
 
@@ -2340,7 +2277,7 @@ function GRM_UpdateBriefing()
 	end
 
 	if ( voidCrystalCount > 0 ) then
-		msg = msg .. GRM_locale.BriefMsgSingleLine .. "Void Crystals: " .. voidCrystalCount .. "\n";
+		msg = msg .. GRM_locale.BriefMsgSingleLine .. "Abyss Crystal: " .. voidCrystalCount .. "\n";
 	end
 
 	-- 레이드 인원점검, 무득골팟인지 확인 Check for raid personnel
@@ -2368,11 +2305,11 @@ function GRM_UpdateBriefing()
 		GoldFormat = "%d";
 	end
 
-	msg = msg .. msgtail .. "Gold Pot (".. MemberNum .. " members): " .. TotalGold .. " gold\n";
+	msg = msg .. msgtail .. "Наш банк: " .. TotalGold .. " золота\n";
 	if ( bNoLoot ) then
 		msg = msg .. "(NL) ";
 	end
-	msg = msg .. "" .. string.format(GoldFormat, EachGold) .. "g per person\n";
+	msg = msg .. "Участников: ".. MemberNum .. " (по " .. string.format(GoldFormat, EachGold) .. "г каждому)\n (без учёта минусов и побора)\n";
 
 	-- 무득골팟 아니면 파티당 골드 계산 Unincorporated gold pod or gold per party
 	if ( MemberNum > 5 ) then
@@ -2433,18 +2370,18 @@ function GRM_Auction_Start( index )
 	
 	if ( UnitInRaid("player") ) then
 		if ( GRM_Option["DiceParty"] == 1 ) then
-			GRM_RaidChat(itemname.." Raise your hand if you need it.");	
-			endMsg = "---------------- deadline.";
+			GRM_RaidChat(itemname.." 필요하신분 손드세요");	
+			endMsg = "---------------- 마감.";
 		else
-			GRM_RaidChat(itemname.." :: Starting auction from ["..GRM_GetUnicodeNumber(gold).."] gold.");
-			endMsg = itemname.." :: Auction Closed.";
+			GRM_RaidChat(itemname.." {circle}"..GRM_GetUnicodeNumber(gold).."{circle} Ставки полной суммой");
+			endMsg = itemname.." :: Торг закрыт.";
 		end
 	elseif ( UnitInParty("party1") ) then
-		SendChatMessage(itemname.." Raise your hand if you need it", "RAID_WARNING");
-		endMsg = "end"; 
+		SendChatMessage(itemname.." 필요하신분 손드세요", "RAID_WARNING");
+		endMsg = "끝"; 
 	else 
-		GRM_SystemChat(itemname.." :: Starting auction from ["..gold.."] gold.");
-		endMsg = itemname.." :: Auction Closed.";
+		GRM_SystemChat(itemname.." {circle}"..gold.."{circle} Ставки полной суммой");
+		endMsg = itemname.." :: Торг закрыт.";
 	end;
 
 	GRM_Schedule( (GRM_RaceOption["Count"]+1) * GRM_Option["AuctionInterval"], GRM_OnFinishAuction, endMsg);
@@ -2486,9 +2423,9 @@ function GRM_OnTimer()
 			GRM_RaidChat(GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]), GRM_Option["AuctionChannel"]);
 		else
 		  if ( GRM_Auction_Player ) then
-		    GRM_RaidChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] seconds left. The current highest bid is ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."]g made by <"..GRM_Auction_Player..">.", GRM_Option["AuctionChannel"]);
+		    GRM_RaidChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] :: "..GRM_Auction_Player.." "..GRM_GetUnicodeNumber(GRM_Auction_Gold).."", GRM_Option["AuctionChannel"]);
 		  else
-			  GRM_RaidChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] seconds left. Current bid is ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."]g.", GRM_Option["AuctionChannel"]);
+			  GRM_RaidChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] :: ", GRM_Option["AuctionChannel"]);
 			end
 		end
 	elseif ( UnitInParty("party1") ) then
@@ -2499,9 +2436,9 @@ function GRM_OnTimer()
 		end
 	else
 	  if ( GRM_Auction_Player ) then
-	    GRM_SystemChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] seconds left. The current highest bid is ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."]g made by <"..GRM_Auction_Player..">.");
+	    GRM_SystemChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] :: "..GRM_Auction_Player.." "..GRM_GetUnicodeNumber(GRM_Auction_Gold).."");
 	  else
-	    GRM_SystemChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] seconds left. Current bid is ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."]g.");
+	    GRM_SystemChat(countHeader.." :: ["..GRM_GetUnicodeNumber(GRM_Count/GRM_Option["AuctionInterval"]).."] :: "..GRM_GetUnicodeNumber(GRM_Auction_Gold).."");
 	  end
 	end
 
@@ -2539,15 +2476,15 @@ function GRM_OnFinishAuction( msg )
 				for dicePlayer in pairs(GRM_DicePlayers) do
 				  local groupnum = GRM_GetRaidRosterPartyNum(dicePlayer);
 				  if ( groupnum == 0 ) then
-					  GRM_RaidChat( dicePlayer.."won the auction, congratulations!" );
+					  GRM_RaidChat( dicePlayer.."님께 낙찰! 축하합니다." );
 					else
-					  GRM_RaidChat( "("..groupnum.."group)"..dicePlayer.."won the auction, congratulations!" );
+					  GRM_RaidChat( "("..groupnum.."파티)"..dicePlayer.."님께 낙찰! 축하합니다." );
 					end
 				end
 			elseif ( playerCount > 0 ) then
 				local dicePlayers = "";
 				for dicePlayer in pairs(GRM_DicePlayers) do
-					dicePlayers = dicePlayers..dicePlayer.." ";
+					dicePlayers = dicePlayers..dicePlayer.."님 ";
 				end
 				local diceCount = 0;
 				if ( GRM_Dice_Edit:GetText() ~= "" and tonumber(GRM_Dice_Edit:GetText()) > 0 ) then
@@ -2555,25 +2492,25 @@ function GRM_OnFinishAuction( msg )
 				else
 					diceCount = playerCount * 100;
 				end
-				GRM_RaidChat(dicePlayers.."Rolls ["..diceCount.."]");
+				GRM_RaidChat(dicePlayers.."주사위 ["..diceCount.."] 굴리세요.");
 			end
 		-- 골드 경매 팟인 경우 If gold auction pod
 		else
 			if ( GRM_Auction_Player ) then
 			  local groupnum = GRM_GetRaidRosterPartyNum(GRM_Auction_Player);
 			  if ( groupnum == 0 ) then
-				  GRM_RaidChat(GRM_Auction_Item.." :: <"..GRM_Auction_Player.."> won with ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."] gold. Please trade to Master Looter.", GRM_Option["AuctionChannel"]);
+				  GRM_RaidChat(GRM_Auction_Item.." :: <"..GRM_Auction_Player.."> забирает за ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."] голды. Трейд лутмастеру.", GRM_Option["AuctionChannel"]);
 				else
-				  GRM_RaidChat(GRM_Auction_Item.." :: <(Grp"..groupnum..")"..GRM_Auction_Player.."> won with ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."] gold. Please trade to Master Looter.", GRM_Option["AuctionChannel"]);
+				  GRM_RaidChat(GRM_Auction_Item.." :: <(Группа"..groupnum..")"..GRM_Auction_Player.."> забирает за ["..GRM_GetUnicodeNumber(GRM_Auction_Gold).."] голды. Трейд лутмастеру.", GRM_Option["AuctionChannel"]);
 				end
 				getglobal( "GRM_NamedGold_Edit"..GRM_Auction_ItemNum ):SetText(GRM_Auction_Gold);
 				GRM_AuctionTable[GRM_Auction_Item] = GRM_Auction_Player;
 			else
 			  if ( GRM_IsNoCrystal(GRM_Auction_Item) ) then
-				  GRM_RaidChat(GRM_Auction_Item.." :: No bids. Cannot be Disenchanted.", GRM_Option["AuctionChannel"]);
+				  GRM_RaidChat(GRM_Auction_Item.." :: Ставок нет. Вендору.", GRM_Option["AuctionChannel"]);
 				  getglobal( "GRM_NamedGold_Edit"..GRM_Auction_ItemNum ):SetText("0");
 				else
-				  GRM_RaidChat(GRM_Auction_Item.." :: No bids. Disenchanting.", GRM_Option["AuctionChannel"]);
+				  GRM_RaidChat(GRM_Auction_Item.." :: Ставок нет. На диз.", GRM_Option["AuctionChannel"]);
 				  getglobal( "GRM_NamedGold_Edit"..GRM_Auction_ItemNum ):SetText("1");
 				end
 			end
@@ -2585,15 +2522,15 @@ function GRM_OnFinishAuction( msg )
 	else
 		GRM_SystemChat(msg);
 		if ( GRM_Auction_Player ) then
-			GRM_SystemChat(GRM_Auction_Item.." :: <"..GRM_Auction_Player.."> won with ["..GRM_Auction_Gold.."] gold. Please trade to Master Looter.");
+			GRM_SystemChat(GRM_Auction_Item.." :: <"..GRM_Auction_Player.."> забирает за ["..GRM_Auction_Gold.."] голды. Трейд лутмастеру.");
 			getglobal( "GRM_NamedGold_Edit"..GRM_Auction_ItemNum ):SetText(GRM_Auction_Gold);
 			GRM_AuctionTable[GRM_Auction_Item] = GRM_Auction_Player;
 		else
 		  if ( GRM_IsNoCrystal(GRM_Auction_Item) ) then
-			  GRM_SystemChat(GRM_Auction_Item.." :: No bids. Cannot be Disenchanted.");
+			  GRM_SystemChat(GRM_Auction_Item.." :: Ставок нет. Вендору.");
 			  getglobal( "GRM_NamedGold_Edit"..GRM_Auction_ItemNum ):SetText("0");
 			else
-			  GRM_SystemChat(GRM_Auction_Item.." :: No bids. Disenchanting.");
+			  GRM_SystemChat(GRM_Auction_Item.." :: Ставок нет. На диз.");
 			  getglobal( "GRM_NamedGold_Edit"..GRM_Auction_ItemNum ):SetText("1");
 			end
 		end

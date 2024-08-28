@@ -277,27 +277,27 @@
 							</Layer>								
 							<Layer>
 								<!-- 스태틱 레이블 -->
-								<FontString name="GRM_Start_Label" inherits="GameFontNormal" text="Start">
+								<FontString name="GRM_Start_Label" inherits="GameFontNormal" text="Старт">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_OptionFrame" relativePoint="TOPLEFT">
 										<Offset><AbsDimension x="85" y="-17" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_Race_Label" inherits="GameFontNormal" text="Raise">
+								<FontString name="GRM_Race_Label" inherits="GameFontNormal" text="Шаг">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_Start_Label" relativePoint="TOPRIGHT">
 										<Offset><AbsDimension x="25" y="0" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_Normal_Label" inherits="GameFontNormal" text="Epic">
+								<FontString name="GRM_Normal_Label" inherits="GameFontNormal" text="бое/рец">
 									<Anchors><Anchor point="TOPRIGHT" relativeTo="GRM_Start_Label" relativePoint="TOPLEFT">
-										<Offset><AbsDimension x="-45" y="-25" /></Offset>
+										<Offset><AbsDimension x="-15" y="-25" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_Token_Label" inherits="GameFontNormal" text="Token">
+								<FontString name="GRM_Token_Label" inherits="GameFontNormal" text="Токен">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_Normal_Label" relativePoint="BOTTOMLEFT">
 										<Offset><AbsDimension x="0" y="-10" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_Count_Label" inherits="GameFontNormal" text="Count">
+								<FontString name="GRM_Count_Label" inherits="GameFontNormal" text="Отсчет">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_Token_Label" relativePoint="BOTTOMLEFT">
 										<Offset><AbsDimension x="0" y="-15" /></Offset>
 									</Anchor></Anchors>
@@ -325,7 +325,7 @@
 								</Scripts>
 							</Button>
 
-							<Button name="GRM_ItemRule_Button" inherits="OptionsButtonTemplate" text="RULE">
+							<Button name="GRM_ItemRule_Button" inherits="OptionsButtonTemplate" text="правила">
 								<Size>
 									<AbsDimension x="70" y="28"/>
 								</Size>
@@ -459,24 +459,24 @@
 						</Backdrop>
 						<Layers>
 							<Layer>
-								<FontString name="GRM_Named_Label" inherits="GameFontNormal" text="Boss Name">
+								<FontString name="GRM_Named_Label" inherits="GameFontNormal" text="Босс">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_EachNamedFrame" relativePoint="TOPLEFT">
-										<Offset><AbsDimension x="10" y="-17" /></Offset>
+										<Offset><AbsDimension x="10" y="-68" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_List_Label" inherits="GameFontNormal" text="# Loot and Gold #">
+								<FontString name="GRM_List_Label" inherits="GameFontNormal" text="Лут и золото">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_Named_Label" relativePoint="TOPLEFT">
-										<Offset><AbsDimension x="0" y="-30" /></Offset>
+										<Offset><AbsDimension x="0" y="40" /></Offset>
 									</Anchor></Anchors>
 									<Color r="1.0" g="1.0" b="1.0"/>
 								</FontString>
-								<FontString name="GRM_Named_List" inherits="GameFontNormal" text="# Loot Log #">
+								<FontString name="GRM_Named_List" inherits="GameFontNormal" text="Лут">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_List_Label" relativePoint="TOPLEFT">
-										<Offset><AbsDimension x="75" y="-30" /></Offset>
+										<Offset><AbsDimension x="65" y="-60" /></Offset>
 									</Anchor></Anchors>
 									<Color r="0.9" g="0.8" b="0.5"/>
 								</FontString>
-								<FontString name="GRM_Gold_List" inherits="GameFontNormal" text="Gold">
+								<FontString name="GRM_Gold_List" inherits="GameFontNormal" text="Золото">
 									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_Named_List" relativePoint="TOPLEFT">
 										<Offset><AbsDimension x="150" y="0" /></Offset>
 									</Anchor></Anchors>
@@ -489,8 +489,8 @@
 									<Color r="0.9" g="0.8" b="0.5"/>
 								</FontString>
 								<FontString name="GRM_List_Label1" inherits="GameFontNormal" text="[1]">
-									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_List_Label" relativePoint="TOPLEFT">
-										<Offset><AbsDimension x="0" y="-55" /></Offset>
+									<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_Named_Label" relativePoint="BOTTOMLEFT">
+										<Offset><AbsDimension x="0" y="-25" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
 								<FontString name="GRM_List_Label2" inherits="GameFontNormal" text="[2]">
@@ -528,7 +528,7 @@
 										<Offset><AbsDimension x="0" y="-22" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_AuctionChannel_Label" inherits="GameFontNormal" text="Auction Channel">
+								<FontString name="GRM_AuctionChannel_Label" inherits="GameFontNormal" text="Канал">
 									<Anchors><Anchor point="BOTTOMLEFT" relativeTo="GRM_EachNamedFrame" relativePoint="BOTTOMLEFT">
 										<Offset><AbsDimension x="10" y="20" /></Offset>
 									</Anchor></Anchors>
@@ -538,7 +538,7 @@
 						<Frames>
 							<EditBox name="GRM_Named_Edit" inherits="GRM_NamedEditBoxTemplate">
 								<Anchors><Anchor point="TOPLEFT" relativeTo="GRM_EachNamedFrame" relativePoint="TOPLEFT">
-									<Offset><AbsDimension x="145" y="-15"/></Offset>
+									<Offset><AbsDimension x="75" y="-65"/></Offset>
 								</Anchor></Anchors>
         						<Scripts>
         						    <OnTabPressed>
@@ -668,12 +668,12 @@
 								</Anchor></Anchors>
 							</Button>
 
-							<Button name="GRM_AddNamed_Button" inherits="OptionsButtonTemplate" text="Add (Edit)">
+							<Button name="GRM_AddNamed_Button" inherits="OptionsButtonTemplate" text="Добавить (Edit)">
 								<Size>
 									<AbsDimension x="100" y="28"/>
 								</Size>
-								<Anchors><Anchor point="TOPRIGHT" relativeTo="GRM_Named_Edit" relativePoint="BOTTOMRIGHT">
-									<Offset><AbsDimension x="0" y="-8"/></Offset>
+								<Anchors><Anchor point="TOPRIGHT" relativeTo="GRM_Named_Edit" relativePoint="TOPRIGHT">
+									<Offset><AbsDimension x="0" y="45"/></Offset>
 								</Anchor></Anchors>
 								<Scripts>
 									<OnClick>
@@ -683,7 +683,7 @@
 								</Scripts>
 							</Button>
 
-							<Button name="GRM_DelNamed_Button" inherits="OptionsButtonTemplate" text="Delete">
+							<Button name="GRM_DelNamed_Button" inherits="OptionsButtonTemplate" text="Удалить">
 								<Size>
 									<AbsDimension x="70" y="28"/>
 								</Size>
@@ -713,7 +713,7 @@
 								</Scripts>
 							</Button>
 
-							<Button name="GRM_RaidInit_Button" inherits="OptionsButtonTemplate" text="Reset Raid">
+							<Button name="GRM_RaidInit_Button" inherits="OptionsButtonTemplate" text="Сброс">
 								<Size>
 									<AbsDimension x="90" y="28"/>
 								</Size>
@@ -728,7 +728,7 @@
 								</Scripts>
 							</Button>
 
-							<Button name="GRM_Refresh_Button" inherits="OptionsButtonTemplate" text="Refresh">
+							<Button name="GRM_Refresh_Button" inherits="OptionsButtonTemplate" text="Обновить">
 								<Size>
 									<AbsDimension x="70" y="28"/>
 								</Size>
@@ -830,7 +830,7 @@
 										<Offset><AbsDimension x="10" y="-10" /></Offset>
 									</Anchor></Anchors>
 								</FontString>
-								<FontString name="GRM_NoLoot_Label" inherits="GameFontNormal" text="Divided by">
+								<FontString name="GRM_NoLoot_Label" inherits="GameFontNormal" text="Делим на">
 									<Anchors><Anchor point="BOTTOMRIGHT">
 										<Offset><AbsDimension x="-160" y="75" /></Offset>
 									</Anchor></Anchors>
@@ -879,7 +879,7 @@
 									</EditBox>
 								</ScrollChild>
 							</ScrollFrame>
-							<Button name="GRM_ShortBrief_Button" inherits="OptionsButtonTemplate" text="Gold Log">
+							<Button name="GRM_ShortBrief_Button" inherits="OptionsButtonTemplate" text="Опубликовать итоги">
 								<Size>
 									<AbsDimension x="200" y="28"/>
 								</Size>
@@ -974,7 +974,7 @@
 									</Anchor></Anchors>
 									<Color r="0.9" g="0.8" b="0.5"/>
 								</FontString>							
-								<FontString name="GRM_CustomBriefChannel_Label" inherits="GameFontNormal" text="Briefing Channel">
+								<FontString name="GRM_CustomBriefChannel_Label" inherits="GameFontNormal" text="Канал">
 									<Anchors><Anchor point="BOTTOMLEFT" relativeTo="GRM_LongBriefFrame" relativePoint="BOTTOMLEFT">
 										<Offset><AbsDimension x="10" y="20" /></Offset>
 									</Anchor></Anchors>
