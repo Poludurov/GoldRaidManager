@@ -1,4 +1,4 @@
-## GoldRaidManager 3.3.x 10.0.1.19 backported to WoW TBC 2.4.3
+## GoldRaidManager 3.3.x 10.0.1.19
 
 **Can handle all aspects of a Gold DKP (GDKP) run:**
 - **Auction Tab:** Auctioning items, splitting gold between the amount of boosters you set, disenchanting if no bets and only if available. 
